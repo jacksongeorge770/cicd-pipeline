@@ -1,5 +1,6 @@
 # CI/CD Pipeline Deployment to AWS EC2 Using GitHub Actions
-Welcome to the official repository of **[Company Name]** where we automate the deployment of our backend service using **GitHub Actions**, **Docker**, and **AWS EC2**.
+Welcome to my personal project repository, where I demonstrate how I automate the deployment of backend services using GitHub Actions, Docker, and AWS EC2. This project showcases my ability to set up CI/CD pipelines, containerize applications, and deploy them to the cloud — reflecting my skills and experience in modern development workflows.
+
 
 ## 🛠️ Deployment Steps
 
