@@ -30,3 +30,58 @@ Tags and pushes the image to DockerHub repository: jackson216/cicd-pipeline.
 - Validate with:
   ```bash
   curl http://<your-ec2-ip>
+
+
+
+  
+# CI/CD Pipeline Deployment to AWS EC2 Using jenkin
+
+This guide explains how to set up a complete CI/CD pipeline using Jenkins to deploy a Dockerized application to an AWS EC2 instance.
+
+### 1.Install jenkin on ec2 t2.Medium instance .
+  - after installation sucessful enter the password found in /var/lib/jenkins/secrets/initialAdminPassword.
+  - create username and passoword
+### 2. store github credentials and dockerhub credentials in jenkin credentials
+- Navigate to: **Manage Jenkins → Credentials**
+- Add:
+  - **GitHub**: Use your username and personal access token.
+  - **Docker Hub**: Use your Docker Hub username and password/access token.
+ 
+  - 
+### 3. create cicd pipeline 
+ - stage 1: cloning repository
+ - stage 2 :Build Docker Image
+ - stage 3 :Login to Docker Hub
+ - stage 4 :Push Docker Image
+ - stage 5 :Deploy to EC2
+
+### 4. 4. Enable GitHub Webhook for Automated Trigger
+In your GitHub repository, go to:
+Settings → Webhooks → Add Webhook
+
+Fill in:
+
+Payload URL:
+http://<your-ec2-ip>:8080/github-webhook/
+
+Content type:
+application/json
+
+Trigger:
+Just the push event
+
+In Jenkins, go to your job configuration:
+
+Check ✅ GitHub hook trigger for GITScm polling
+
+This setup ensures Jenkins automatically triggers a build and deployment whenever you push code to GitHub.
+## ☁️ 5. EC2 Configuration
+
+- **OS:** Ubuntu 24.04
+- **Security Group Inbound Rules:**
+  - **HTTP (80)**
+  - **HTTPS (443)**
+  - **SSH (22)**
+  - **Custom TCP (8080)** – for Jenkins
+  - **Custom TCP (8000/8081)** – for your application
+
