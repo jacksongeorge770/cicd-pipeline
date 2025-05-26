@@ -42,7 +42,7 @@ This guide explains how to set up a complete CI/CD pipeline using Jenkins to dep
 
 ## 🖼️ Architecture Diagram
 
-![Architecture](./assets/1stjenkin.drawio.png)
+![Architecture](./assets/jenkinlast.drawio.png)
 
 ### 1.Install jenkin on ec2 t2.Medium instance .
   - after installation sucessful enter the password found in /var/lib/jenkins/secrets/initialAdminPassword.
