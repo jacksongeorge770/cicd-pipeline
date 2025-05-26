@@ -1,7 +1,9 @@
 # CI/CD Pipeline Deployment to AWS EC2 Using GitHub Actions
 Welcome to my personal project repository, where I demonstrate how I automate the deployment of backend services using GitHub Actions, Docker, and AWS EC2. This project showcases my ability to set up CI/CD pipelines, containerize applications, and deploy them to the cloud — reflecting my skills and experience in modern development workflows.
 
+## 🖼️ Architecture Diagram
 
+![Architecture](./assets/1st%20GIthubaction.drawio.png)
 ## 🛠️ Deployment Steps
 
 ### 1. CI Pipeline (GitHub Actions)
@@ -37,6 +39,10 @@ Tags and pushes the image to DockerHub repository: jackson216/cicd-pipeline.
 # CI/CD Pipeline Deployment to AWS EC2 Using jenkin
 
 This guide explains how to set up a complete CI/CD pipeline using Jenkins to deploy a Dockerized application to an AWS EC2 instance.
+
+## 🖼️ Architecture Diagram
+
+![Architecture](./assets/1stjenkin.drawio.png)
 
 ### 1.Install jenkin on ec2 t2.Medium instance .
   - after installation sucessful enter the password found in /var/lib/jenkins/secrets/initialAdminPassword.
